@@ -23,12 +23,75 @@
 			remoteGlobalIDString = 5623BA7620CF5C3600CA3AB0;
 			remoteInfo = magnetometer;
 		};
+		568CB16F20E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = "CorePlot Mac";
+		};
+		568CB17120E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0730F600109492D800E95162;
+			remoteInfo = "UnitTests Mac";
+		};
+		568CB17320E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09781A46185200D45436;
+			remoteInfo = "CorePlot iOS";
+		};
+		568CB17520E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09821A46185300D45436;
+			remoteInfo = "UnitTests iOS";
+		};
+		568CB17720E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09BA1A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		568CB17920E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09C41A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouchTests";
+		};
+		568CB17B20E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6921BC83F2A0091C8F7;
+			remoteInfo = "CorePlot tvOS";
+		};
+		568CB17D20E1D16100279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6B71BC83F2D0091C8F7;
+			remoteInfo = "UnitTests tvOS";
+		};
+		568CB17F20E1D1A400279669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C38A09B91A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5623BA7720CF5C3600CA3AB0 /* magnetometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5623BA7A20CF5C3700CA3AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5623BA7C20CF5C3700CA3AB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5623BA7C20CF5C3700CA3AB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; };
 		5623BA7F20CF5C3700CA3AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5623BA8120CF5C3700CA3AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5623BA8420CF5C3700CA3AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +99,7 @@
 		5623BA8B20CF5C3700CA3AB0 /* magnetometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magnetometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5623BA8F20CF5C3700CA3AB0 /* magnetometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magnetometerTests.swift; sourceTree = "<group>"; };
 		5623BA9120CF5C3700CA3AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568CB15F20E1D16100279669 /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = "../core-plot/framework/CorePlot.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +126,7 @@
 				5623BA7920CF5C3600CA3AB0 /* magnetometer */,
 				5623BA8E20CF5C3700CA3AB0 /* magnetometerTests */,
 				5623BA7820CF5C3600CA3AB0 /* Products */,
+				568CB15F20E1D16100279669 /* CorePlot.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +161,21 @@
 			path = magnetometerTests;
 			sourceTree = "<group>";
 		};
+		568CB16020E1D16100279669 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				568CB17020E1D16100279669 /* CorePlot.framework */,
+				568CB17220E1D16100279669 /* UnitTests.xctest */,
+				568CB17420E1D16100279669 /* CorePlot.framework */,
+				568CB17620E1D16100279669 /* UnitTests iOS.xctest */,
+				568CB17820E1D16100279669 /* libCorePlot-CocoaTouch.a */,
+				568CB17A20E1D16100279669 /* CorePlot-CocoaTouchTests.xctest */,
+				568CB17C20E1D16100279669 /* CorePlot.framework */,
+				568CB17E20E1D16100279669 /* UnitTests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +190,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				568CB18020E1D1A400279669 /* PBXTargetDependency */,
 			);
 			name = magnetometer;
 			productName = magnetometer;
@@ -146,10 +227,12 @@
 				TargetAttributes = {
 					5623BA7620CF5C3600CA3AB0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JA8RK69UR2;
 						ProvisioningStyle = Automatic;
 					};
 					5623BA8A20CF5C3700CA3AB0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JA8RK69UR2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5623BA7620CF5C3600CA3AB0;
 					};
@@ -166,6 +249,12 @@
 			mainGroup = 5623BA6E20CF5C3600CA3AB0;
 			productRefGroup = 5623BA7820CF5C3600CA3AB0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 568CB16020E1D16100279669 /* Products */;
+					ProjectRef = 568CB15F20E1D16100279669 /* CorePlot.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5623BA7620CF5C3600CA3AB0 /* magnetometer */,
@@ -173,6 +262,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		568CB17020E1D16100279669 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 568CB16F20E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17220E1D16100279669 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 568CB17120E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17420E1D16100279669 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 568CB17320E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17620E1D16100279669 /* UnitTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests iOS.xctest";
+			remoteRef = 568CB17520E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17820E1D16100279669 /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = 568CB17720E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17A20E1D16100279669 /* CorePlot-CocoaTouchTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CorePlot-CocoaTouchTests.xctest";
+			remoteRef = 568CB17920E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17C20E1D16100279669 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 568CB17B20E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		568CB17E20E1D16100279669 /* UnitTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests tvOS.xctest";
+			remoteRef = 568CB17D20E1D16100279669 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5623BA7520CF5C3600CA3AB0 /* Resources */ = {
@@ -219,6 +367,11 @@
 			isa = PBXTargetDependency;
 			target = 5623BA7620CF5C3600CA3AB0 /* magnetometer */;
 			targetProxy = 5623BA8C20CF5C3700CA3AB0 /* PBXContainerItemProxy */;
+		};
+		568CB18020E1D1A400279669 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CorePlot-CocoaTouch";
+			targetProxy = 568CB17F20E1D1A400279669 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -339,11 +492,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JA8RK69UR2;
 				INFOPLIST_FILE = magnetometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.magnetometer;
+				PRODUCT_BUNDLE_IDENTIFIER = magnetometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,11 +506,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JA8RK69UR2;
 				INFOPLIST_FILE = magnetometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.magnetometer;
+				PRODUCT_BUNDLE_IDENTIFIER = magnetometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -364,6 +521,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JA8RK69UR2;
 				INFOPLIST_FILE = magnetometerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.magnetometerTests;
@@ -378,6 +536,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JA8RK69UR2;
 				INFOPLIST_FILE = magnetometerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.magnetometerTests;
@@ -406,6 +565,7 @@
 				5623BA9620CF5C3700CA3AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5623BA9720CF5C3700CA3AB0 /* Build configuration list for PBXNativeTarget "magnetometerTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +574,7 @@
 				5623BA9920CF5C3700CA3AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
