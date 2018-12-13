@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118C2666D5F8D2DCDD3D4D95 /* Pods_magnetometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B266F38B7606BEC6AF392AAF /* Pods_magnetometer.framework */; };
 		5623BA7B20CF5C3700CA3AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623BA7A20CF5C3700CA3AB0 /* AppDelegate.swift */; };
 		5623BA7D20CF5C3700CA3AB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623BA7C20CF5C3700CA3AB0 /* ViewController.swift */; };
 		5623BA8020CF5C3700CA3AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5623BA7E20CF5C3700CA3AB0 /* Main.storyboard */; };
 		5623BA8220CF5C3700CA3AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5623BA8120CF5C3700CA3AB0 /* Assets.xcassets */; };
 		5623BA8520CF5C3700CA3AB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5623BA8320CF5C3700CA3AB0 /* LaunchScreen.storyboard */; };
 		5623BA9020CF5C3700CA3AB0 /* magnetometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623BA8F20CF5C3700CA3AB0 /* magnetometerTests.swift */; };
+		B5ABF65B277C402CEA7E1315 /* Pods_magnetometerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B1416F803B33FFD611FDFA /* Pods_magnetometerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0FF09FEBF52C11B907A0C2 /* Pods-magnetometerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetometerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetometerTests/Pods-magnetometerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		129EDD984B96345D8771CAE6 /* Pods-magnetometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetometer.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetometer/Pods-magnetometer.release.xcconfig"; sourceTree = "<group>"; };
+		1372BA9FEBC8A8DDF3C7E884 /* Pods-magnetometerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetometerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetometerTests/Pods-magnetometerTests.release.xcconfig"; sourceTree = "<group>"; };
+		18B1416F803B33FFD611FDFA /* Pods_magnetometerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnetometerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5623BA7720CF5C3600CA3AB0 /* magnetometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5623BA7A20CF5C3700CA3AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5623BA7C20CF5C3700CA3AB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		5623BA8B20CF5C3700CA3AB0 /* magnetometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magnetometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5623BA8F20CF5C3700CA3AB0 /* magnetometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magnetometerTests.swift; sourceTree = "<group>"; };
 		5623BA9120CF5C3700CA3AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B266F38B7606BEC6AF392AAF /* Pods_magnetometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnetometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3BEAF42A267CD590032B54 /* Pods-magnetometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetometer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetometer/Pods-magnetometer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118C2666D5F8D2DCDD3D4D95 /* Pods_magnetometer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5ABF65B277C402CEA7E1315 /* Pods_magnetometerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				5623BA7920CF5C3600CA3AB0 /* magnetometer */,
 				5623BA8E20CF5C3700CA3AB0 /* magnetometerTests */,
 				5623BA7820CF5C3600CA3AB0 /* Products */,
+				E14A13F0CADC5D981A802C34 /* Pods */,
+				67CCA5F7486AFBABE00FBB57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = magnetometerTests;
 			sourceTree = "<group>";
 		};
+		67CCA5F7486AFBABE00FBB57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B266F38B7606BEC6AF392AAF /* Pods_magnetometer.framework */,
+				18B1416F803B33FFD611FDFA /* Pods_magnetometerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E14A13F0CADC5D981A802C34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB3BEAF42A267CD590032B54 /* Pods-magnetometer.debug.xcconfig */,
+				129EDD984B96345D8771CAE6 /* Pods-magnetometer.release.xcconfig */,
+				0D0FF09FEBF52C11B907A0C2 /* Pods-magnetometerTests.debug.xcconfig */,
+				1372BA9FEBC8A8DDF3C7E884 /* Pods-magnetometerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5623BA9420CF5C3700CA3AB0 /* Build configuration list for PBXNativeTarget "magnetometer" */;
 			buildPhases = (
+				DCDED31C4C494921009792D9 /* [CP] Check Pods Manifest.lock */,
 				5623BA7320CF5C3600CA3AB0 /* Sources */,
 				5623BA7420CF5C3600CA3AB0 /* Frameworks */,
 				5623BA7520CF5C3600CA3AB0 /* Resources */,
+				669CA557284D496941714E12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5623BA9720CF5C3700CA3AB0 /* Build configuration list for PBXNativeTarget "magnetometerTests" */;
 			buildPhases = (
+				8529A41A988D540F953479F9 /* [CP] Check Pods Manifest.lock */,
 				5623BA8720CF5C3700CA3AB0 /* Sources */,
 				5623BA8820CF5C3700CA3AB0 /* Frameworks */,
 				5623BA8920CF5C3700CA3AB0 /* Resources */,
@@ -195,6 +230,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		669CA557284D496941714E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-magnetometer/Pods-magnetometer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetometer/Pods-magnetometer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8529A41A988D540F953479F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-magnetometerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCDED31C4C494921009792D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-magnetometer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5623BA7320CF5C3600CA3AB0 /* Sources */ = {
@@ -339,6 +443,7 @@
 		};
 		5623BA9520CF5C3700CA3AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3BEAF42A267CD590032B54 /* Pods-magnetometer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JA8RK69UR2;
@@ -353,6 +458,7 @@
 		};
 		5623BA9620CF5C3700CA3AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129EDD984B96345D8771CAE6 /* Pods-magnetometer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JA8RK69UR2;
@@ -367,6 +473,7 @@
 		};
 		5623BA9820CF5C3700CA3AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D0FF09FEBF52C11B907A0C2 /* Pods-magnetometerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -382,6 +489,7 @@
 		};
 		5623BA9920CF5C3700CA3AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1372BA9FEBC8A8DDF3C7E884 /* Pods-magnetometerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
