@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     let motionManager = CMMotionManager()
     let refFrame : CMAttitudeReferenceFrame = CMAttitudeReferenceFrame()
     
-    let Fs : Double = 1.0
+    let Fs : Double = 10.0
     
     private var BxChartEntryArray: [ChartDataEntry] = []
     private var ByChartEntryArray: [ChartDataEntry] = []
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         
         let Ts : Double = 1.0 / Fs
         var timeElapsed = Double()
+        var xAxisMin : Double = 0.0
         
         let BxSet : LineChartDataSet = LineChartDataSet(values: self.BxChartEntryArray, label: "Bx")
         BxSet.drawCirclesEnabled = false
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
         
         let BzSet : LineChartDataSet = LineChartDataSet(values: self.BzChartEntryArray, label: "Bz")
         BzSet.drawCirclesEnabled = false
-        BzSet.setColor(UIColor.yellow)
+        BzSet.setColor(UIColor.blue)
         BzSet.axisDependency = YAxis.AxisDependency.left
         BzSet.drawValuesEnabled = false
         
@@ -88,6 +89,7 @@ class ViewController: UIViewController {
                 
                 self.dataPts += 1
                 timeElapsed = Double(self.dataPts) * Ts
+                xAxisMin = Double.maximum(Ts, timeElapsed-10)
                 
                 // update data set arrays
                 BxSet.addEntry(ChartDataEntry(x: timeElapsed, y: BxData))
@@ -95,8 +97,7 @@ class ViewController: UIViewController {
                 BzSet.addEntry(ChartDataEntry(x: timeElapsed, y: BzData))
                 BnetSet.addEntry(ChartDataEntry(x: timeElapsed, y: BnetData))
                 
-                var BdataSetArray : [LineChartDataSet] = [BxSet, BySet, BzSet, BnetSet]
-                
+                let BdataSetArray : [LineChartDataSet] = [BxSet, BySet, BzSet, BnetSet]
                 let BLineChartData = LineChartData(dataSets: BdataSetArray)
                 
                 let BxStr : String? = String(format: "%.3f uT", BxData)
@@ -111,6 +112,8 @@ class ViewController: UIViewController {
                 self.BnetValue.text = BnetStr
                     
                 self.timePlotView.data = BLineChartData
+                self.timePlotView.xAxis.axisMinimum = xAxisMin
+                    
                 }
                 
             })
