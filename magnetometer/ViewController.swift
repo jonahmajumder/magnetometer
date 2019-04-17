@@ -149,6 +149,9 @@ class ViewController: UIViewController {
         self.timePlotView.legend.drawInside = false
         self.timePlotView.legend.form = Legend.Form.circle
         self.timePlotView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        self.timePlotView.chartDescription?.enabled = false
+        
+        self.freqPlotView.chartDescription?.enabled = false
         
         self.BxSet = LineChartDataSet(values: EmptyChartEntryArray, label: "Bx")
         BxSet.drawCirclesEnabled = false
@@ -180,11 +183,9 @@ class ViewController: UIViewController {
         BnetFFTSet.axisDependency = YAxis.AxisDependency.left
         BnetFFTSet.drawValuesEnabled = false
         
-        let Ts : Double = 1.0 / self.Fs
+        let Ts : Double = 1.0 / MagConstants.DAQ.SampleFrequency
         var timeElapsed = Double()
         var xAxisMin : Double = 0.0
-        
-//        print(Array(0...0).map{Double($0)})
         
         if motionManager.isDeviceMotionAvailable {
             
@@ -208,7 +209,7 @@ class ViewController: UIViewController {
                 let BnetAvg : Double = self.BnetDoubleArray.reduce(0, +) / Double(self.BnetDoubleArray.count)
                 
                 let fftmag = fft(self.BnetDoubleArray.map{$0 - BnetAvg})
-                let fftaxis = Array(0...self.dataPts).map{Double($0)*self.Fs/Double(self.dataPts+1)}
+                let fftaxis = Array(0...self.dataPts).map{Double($0) * MagConstants.DAQ.SampleFrequency / Double(self.dataPts+1)}
                 
 //                print(fftaxis)
                 
@@ -218,7 +219,7 @@ class ViewController: UIViewController {
 //                print(fftmag.count/2)
                 
                 timeElapsed = Double(self.dataPts) * Ts
-                xAxisMin = Double.maximum(Ts, timeElapsed-(Ts*100.0))
+                xAxisMin = Double.maximum(Ts, timeElapsed - (Ts * MagConstants.DAQ.MaxDataPtsOnScreen))
                 
                 // update data set arrays
                 _ = self.BxSet.addEntry(ChartDataEntry(x: timeElapsed, y: BxData))
