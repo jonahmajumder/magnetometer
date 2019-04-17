@@ -244,11 +244,19 @@
                                                 <rect key="frame" x="20" y="10" width="315" height="159.5"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency (Hz)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvt-Ns-nLt" userLabel="FLabel">
+                                                <rect key="frame" x="155" y="171" width="47" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Aw0-3E-jnm" firstAttribute="width" secondItem="gL6-Bs-DPh" secondAttribute="width" constant="-40" id="7ts-ie-NMq" userLabel="f plot width"/>
+                                            <constraint firstItem="Bvt-Ns-nLt" firstAttribute="centerX" secondItem="gL6-Bs-DPh" secondAttribute="centerX" id="OUT-5D-Ey6" userLabel="flabel center"/>
                                             <constraint firstItem="Aw0-3E-jnm" firstAttribute="centerX" secondItem="gL6-Bs-DPh" secondAttribute="centerX" id="Ybp-BB-Ugl" userLabel="h center freq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bvt-Ns-nLt" secondAttribute="bottom" constant="5" id="Z4y-zl-8F2" userLabel="flabel bottom offset"/>
                                             <constraint firstItem="Aw0-3E-jnm" firstAttribute="top" secondItem="gL6-Bs-DPh" secondAttribute="top" constant="10" id="h3O-f8-uLG" userLabel="f plot top offset"/>
                                             <constraint firstItem="Aw0-3E-jnm" firstAttribute="height" secondItem="gL6-Bs-DPh" secondAttribute="height" constant="-30" id="jqD-PC-hd4" userLabel="f plot hgt"/>
                                         </constraints>
