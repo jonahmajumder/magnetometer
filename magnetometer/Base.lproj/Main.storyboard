@@ -197,11 +197,15 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
                                                                 <constraints>
                                                                     <constraint firstItem="VOj-FQ-WdO" firstAttribute="height" secondItem="lFA-Sl-yOZ" secondAttribute="height" id="34N-Bg-KEP"/>
                                                                     <constraint firstItem="CYj-Yw-aRf" firstAttribute="height" secondItem="lFA-Sl-yOZ" secondAttribute="height" id="XqH-eB-SPt"/>
                                                                     <constraint firstItem="4va-OP-Tiy" firstAttribute="height" secondItem="lFA-Sl-yOZ" secondAttribute="height" id="az6-OL-8WT"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="8lB-Ll-mjd" appends="YES" id="Fyh-XD-LAH"/>
+                                                                </connections>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -308,6 +312,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="8lB-Ll-mjd">
+                    <connections>
+                        <action selector="resetSwiper:" destination="BYZ-38-t0r" id="Ah4-xo-CO0"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="135.38230884557723"/>
         </scene>

@@ -88,13 +88,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var ByValue: UILabel!
     @IBOutlet weak var BxValue: UILabel!
     
+    @IBAction func resetSwiper(_ sender: UISwipeGestureRecognizer) {
+        self.resetNextTime = true
+    }
+    
     @objc let motionManager = CMMotionManager()
     @objc let refFrame : CMAttitudeReferenceFrame = CMAttitudeReferenceFrame()
     
-    private var Fs : Double = 10.0
-    
     @objc let EmptyChartEntryArray: [ChartDataEntry] = []
-    private var dataPts: Int = 0
+    private var dataPts : Int = 0
+    
+    private var resetNextTime : Bool = false
     
     private var BxSet : LineChartDataSet = LineChartDataSet()
     private var BySet : LineChartDataSet = LineChartDataSet()
@@ -125,6 +129,9 @@ class ViewController: UIViewController {
         self.freqPlotView.rightAxis.enabled = false
         self.freqPlotView.leftAxis.axisMinimum = 0
         self.freqPlotView.chartDescription?.enabled = false
+        
+        self.freqPlotView.xAxis.axisMaximum = MagConstants.DAQ.SampleFrequency / 2
+        self.freqPlotView.xAxis.granularity = 1
         
         self.BxSet = LineChartDataSet(values: EmptyChartEntryArray, label: "Bx")
         BxSet.drawCirclesEnabled = false
@@ -172,6 +179,18 @@ class ViewController: UIViewController {
                     print("error=\(String(describing: error))")
                 }
                 
+                if self.resetNextTime {
+                    self.BxSet.clear()
+                    self.BySet.clear()
+                    self.BzSet.clear()
+                    self.BnetSet.clear()
+                    self.BnetDoubleArray = []
+                    
+                    self.dataPts = 0
+                    
+                    self.resetNextTime = false
+                }
+                
                 let BxData = motion?.magneticField.field.x ?? 0.0
                 let ByData = motion?.magneticField.field.y ?? 0.0
                 let BzData = motion?.magneticField.field.z ?? 0.0
@@ -184,6 +203,7 @@ class ViewController: UIViewController {
                 let fftmag = Helper.fft(self.BnetDoubleArray.map{$0 - BnetAvg})
                 let fftaxis = Array(0...self.dataPts).map{Double($0) * MagConstants.DAQ.SampleFrequency / Double(self.dataPts+1)}
                 
+//                print(fftmag)
 //                print(fftaxis)
                 
 //                print(self.BnetDoubleArray.count)
@@ -224,7 +244,7 @@ class ViewController: UIViewController {
                     self.BnetValue.text = BnetStr
                     
                     self.timePlotView.data = BLineChartData
-                    self.timePlotView.xAxis.axisMinimum = xAxisMin
+                    self.timePlotView.xAxis.axisMinimum = xAxisMin // set min as either zero or new value to frame scrolls
                     
                     self.freqPlotView.data = BnetFFTData
                     
@@ -235,21 +255,6 @@ class ViewController: UIViewController {
 //        motionManager.stopDeviceMotionUpdates() // does this fire immediately?
         
     }
-    
-//    @objc func swipeReset() {
-//        self.resetData()
-//    }
-    
-    private func resetData() {
-        print("got reset signal")
-        self.BxSet.values = EmptyChartEntryArray
-        self.BySet.values = EmptyChartEntryArray
-        self.BzSet.values = EmptyChartEntryArray
-        self.BnetSet.values = EmptyChartEntryArray
-        
-        self.dataPts = 0
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
