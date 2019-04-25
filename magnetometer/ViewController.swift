@@ -89,7 +89,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var BxValue: UILabel!
     
     @IBAction func resetSwiper(_ sender: UISwipeGestureRecognizer) {
-        self.resetNextTime = true
+        debugPrint(sender.direction)
+        self.resetAll = true
     }
     
     @objc let motionManager = CMMotionManager()
@@ -98,7 +99,7 @@ class ViewController: UIViewController {
     @objc let EmptyChartEntryArray: [ChartDataEntry] = []
     private var dataPts : Int = 0
     
-    private var resetNextTime : Bool = false
+    private var resetAll : Bool = false
     
     private var BxSet : LineChartDataSet = LineChartDataSet()
     private var BySet : LineChartDataSet = LineChartDataSet()
@@ -179,7 +180,7 @@ class ViewController: UIViewController {
                     print("error=\(String(describing: error))")
                 }
                 
-                if self.resetNextTime {
+                if self.resetAll {
                     self.BxSet.clear()
                     self.BySet.clear()
                     self.BzSet.clear()
@@ -188,7 +189,7 @@ class ViewController: UIViewController {
                     
                     self.dataPts = 0
                     
-                    self.resetNextTime = false
+                    self.resetAll = false
                 }
                 
                 let BxData = motion?.magneticField.field.x ?? 0.0
@@ -201,7 +202,7 @@ class ViewController: UIViewController {
                 let BnetAvg : Double = self.BnetDoubleArray.reduce(0, +) / Double(self.BnetDoubleArray.count)
                 
                 let fftmag = Helper.fft(self.BnetDoubleArray.map{$0 - BnetAvg})
-                let fftaxis = Array(0...self.dataPts).map{Double($0) * MagConstants.DAQ.SampleFrequency / Double(self.dataPts+1)}
+                let fftaxis = Array(0...self.BnetDoubleArray.count).map{Double($0) * MagConstants.DAQ.SampleFrequency / Double(self.BnetDoubleArray.count)}
                 
 //                print(fftmag)
 //                print(fftaxis)
@@ -227,6 +228,15 @@ class ViewController: UIViewController {
                 for i in 0..<fftmag.count/2+1 {
                     _ = self.BnetFFTSet.addEntry(ChartDataEntry(x: fftaxis[i], y: fftmag[i]))
                 }
+                
+//                print("New iteration")
+//                print(self.freqPlotView.leftAxis.axisMaximum)
+//                print(Helper.autoLimit(self.freqPlotView.leftAxis.axisMaximum))
+                
+                let (ylim, incr) = Helper.autoLimit(fftmag.max() ?? 0)
+                
+                self.freqPlotView.leftAxis.axisMaximum = ylim
+                self.freqPlotView.leftAxis.granularity = incr
                 
                 let BnetFFTData = LineChartData(dataSet: self.BnetFFTSet)
                 
